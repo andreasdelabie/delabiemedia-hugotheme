@@ -127,7 +127,12 @@ body {
             }
         }
         footer {
-            display: none;
+            .left, .right {
+                visibility: hidden;
+            }
+            .legal {
+                display: none;
+            }
         }
         .page {
             padding: 25px 50px;
