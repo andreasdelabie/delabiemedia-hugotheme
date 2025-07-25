@@ -49,12 +49,12 @@ body {
         margin: 0.5em 0;
     }
     button {
-        padding: 5px;
+        padding: 5px 10px;
         position: relative;
         z-index: 0;
-        overflow: hidden;
         border: none;
         border-radius: 10px;
+        clip-path: inset(0 round 10px);
         background-color: var(--logo-black);
         font-size: var(--fs-small);
         font-weight: 600;
@@ -138,6 +138,9 @@ body {
         .page {
             padding: 25px 50px;
             background-color: white;
+            .links{
+                display: none;
+            }
         }
     }
 }

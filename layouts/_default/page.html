@@ -51,6 +51,14 @@
                     </div>
                 </div>
                 {{ .Page.Content}}
+                {{ if .Page.Params.document }}
+                <div class="links">
+                    <button onclick="window.print()">Print</button>
+                    {{ with .Page.Params.sign_id }}
+                    <a href="http://192.168.0.30:4000/templates/{{ . }}" target="_blank" title="Onderteken contract via DocuSeal"><button>Ondertekenen</button></a>
+                    {{ end }}
+                </div>
+                {{ end }}
             </div>
         </section>
     </main>
