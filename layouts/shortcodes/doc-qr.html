@@ -1,0 +1,12 @@
+<div class="doc-qr">
+    <p>Up-to-date document:</p>
+    {{ $text := .Page.Permalink }}
+    {{ $opts := dict
+        "level" "high"
+        "scale" 2
+        "targetDir" "assets/doc-qr"
+    }}
+    {{ with images.QR $text $opts }}
+    <img src="{{.RelPermalink}}" alt="">
+    {{ end }}
+</div>
