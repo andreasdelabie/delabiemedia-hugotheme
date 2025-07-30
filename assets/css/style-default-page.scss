@@ -9,6 +9,7 @@
     background-color: var(--white);
     .content {
         max-width: 75ch;
+        overflow-wrap: anywhere;
         a {
             color: var(--logo-magenta);
             text-decoration: none;
