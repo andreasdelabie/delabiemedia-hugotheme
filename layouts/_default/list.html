@@ -8,7 +8,7 @@
     <title>{{ .Page.Params.Title }} | Delabie Media</title>
     <meta name="author" content="Andreas Delabie">
     <link rel="canonical" href="{{ .Page.Permalink }}">
-    <link rel="shortcut icon" href="/assets/DelabieMedia_Favicon_128px.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/DelabieMedia_Favicon.png" type="image/x-icon">
     {{ with resources.Get "css/style-global.scss" | toCSS | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}" type="text/css">{{ end }}
     {{ with resources.Get "css/style-default-page.scss" | toCSS | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}" type="text/css">{{ end }}
     {{ with resources.Get "js/cookies.js" | minify | fingerprint }}<script src="{{ .RelPermalink }}" defer></script>{{ end }}
