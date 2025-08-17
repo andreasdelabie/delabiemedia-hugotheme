@@ -1,14 +1,14 @@
 :root {
     --grey: #1d1d1d;
     --white: #f0f0f0;
-    --logo-white: #d9d9d9;
-    --logo-yellow: #f9fb00;
-    --logo-cyan: #02feff;
-    --logo-green: #01ff00;
-    --logo-magenta: #fd00fb;
-    --logo-red: #fb0102;
-    --logo-blue: #0301fc;
-    --logo-black: #404040;
+    --logo-white: hsl(0, 0%, 85%);
+    --logo-yellow: rgb(255, 255, 0);
+    --logo-cyan: rgb(0, 255, 255);
+    --logo-green: rgb(0, 255, 0);
+    --logo-magenta: rgb(255, 0, 255);
+    --logo-red: rgb(255, 0, 0);
+    --logo-blue: rgb(0, 0, 255);
+    --logo-black: hsl(0, 0%, 25%);
     --fs-small: 1rem;
     --fs-medium: 1.5rem;
     --fs-large: 3rem;
