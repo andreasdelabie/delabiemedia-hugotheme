@@ -1,6 +1,6 @@
 ---
-title: "Title"
-description: "Description"
-date: "yyyy-mm-dd"
+title: Title
+description: Description
+date: yyyy-mm-dd
 document: false
 ---
