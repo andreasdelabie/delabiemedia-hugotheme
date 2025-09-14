@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    {{ with .Page.Params.sitemap.disable }}{{ if not false }}<meta name="robots" content="noindex, nofollow">{{ end }}{{ end }}
+    {{ with .Page.Params.Noindex }}{{ if not false }}<meta name="robots" content="noindex">{{ end }}{{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Page.Params.Title }} - {{ .Site.Title }} | {{ .Site.Params.titleDescription }} | {{ .Site.Params.titleKeywords }}</title>
     <meta name="author" content="Andreas Delabie">
@@ -55,7 +55,7 @@
                 <div class="links">
                     <button onclick="window.print()">Print</button>
                     {{ with .Page.Params.sign_id }}
-                    <a href="http://docs.delabiemedia.be/templates/{{ . }}" target="_blank" title="Onderteken contract via DocuSeal"><button>Ondertekenen</button></a>
+                    <a href="http://docs.delabiemedia.be/templates/{{ . }}" target="_blank" rel="noopener noreferrer nofollow" title="Onderteken contract via DocuSeal"><button>Ondertekenen</button></a>
                     {{ end }}
                 </div>
                 {{ end }}
