@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Page.Params.Title }} - {{ .Site.Title }} | {{ .Site.Params.titleDescription }} | {{ .Site.Params.titleKeywords }}</title>
+    <meta name="author" content="Andreas Delabie">
+    <link rel="canonical" href="{{ .Page.Permalink }}">
+    <link rel="shortcut icon" href="/assets/DelabieMedia_Favicon.png" type="image/x-icon">
+    {{ with resources.Get "css/style-global.scss" | toCSS | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}" type="text/css">{{ end }}
+    {{ with resources.Get "css/style-default-page.scss" | toCSS | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}" type="text/css">{{ end }}
+    {{ with resources.Get "js/cookies.js" | minify | fingerprint }}<script src="{{ .RelPermalink }}" defer></script>{{ end }}
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    {{ with resources.Get "js/animation-global.js" | minify | fingerprint }}<script src="{{ .RelPermalink }}" defer></script>{{ end }}
+</head>
+
+<body>
+    {{ partial "header.html" }}
+    <main>
+        <section class="page">
+            <div class="content">
+                <div class="title">
+                    <h2>{{ .Page.Params.Title | strings.ToUpper}}</h2>
+                    <div class="stripes">
+                        <div class="white"></div>
+                        <div class="yellow"></div>
+                        <div class="cyan"></div>
+                        <div class="green"></div>
+                        <div class="magenta"></div>
+                        <div class="red"></div>
+                        <div class="blue"></div>
+                        <div class="black"></div>
+                    </div>
+                </div>
+                <a href="/sitemap.xml"><p style="margin-bottom: 1em;">Show XML</p></a>
+                {{ range sort .Site.Pages ".Page.Permalink" }}
+                <a href="{{ .Page.RelPermalink }}"><p>{{ .Page.Permalink }}</p></a>
+                {{ end }}
+            </div>
+        </section>
+    </main>
+    {{ partial "footer.html" }}
+    {{ partial "cookiebanner.html" }}
+</body>
+
+</html>
